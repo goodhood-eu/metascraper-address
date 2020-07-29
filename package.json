@@ -1,0 +1,42 @@
+{
+  "name": "metascraper-address",
+  "description": "A metascraper rule to extract address information from websites",
+  "author": "Nebenan.de <max@nebenan.de>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "repository": "goodhood-eu/metascraper-address",
+  "bugs": "https://github.com/goodhood-eu/metascraper-address/issues",
+  "version": "1.0.0",
+  "keywords": [
+    "metascraper",
+    "address",
+    "street",
+    "location",
+    "poi",
+    "scrape",
+    "parse"
+  ],
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "reinstall": "rm -rf node_modules package-lock.json && npm install",
+    "lint": "eslint ./",
+    "prepublishOnly": "npm test && npm run lint && echo \"\\033[0;32mReady to publish\\033[0m\"",
+    "test": "TZ='GMT' mocha \"./{,!(node_modules)/**}/*.test.js\""
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-nebenan-base": "^1.0.0",
+    "mocha": "^8.0.1",
+    "metascraper": "^5.13.1"
+  },
+  "dependencies": {
+    "@metascraper/helpers": "^5.13.1"
+  },
+  "peerDependencies": {
+    "metascraper": "^5.13.1"
+  }
+}

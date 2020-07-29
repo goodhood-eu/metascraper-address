@@ -1,0 +1,15 @@
+{
+  "extends": ["nebenan-base"],
+  "env": {
+    "node": true
+  },
+  "overrides": [{
+    "files": ["**/*.test.js"],
+    "env": {
+      "mocha": true
+    },
+    "rules": {
+      "no-unused-expressions": "off"
+    }
+  }]
+}
